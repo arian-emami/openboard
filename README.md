@@ -1,3 +1,4 @@
+![](Picture1.png)
 # OpenBoard
 
 An open place to share
@@ -6,7 +7,6 @@ An open place to share
 [![Black code style](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/ambv/black)
 
 License: MIT
-![](Picture1.png)
 
 ## Settings
 
