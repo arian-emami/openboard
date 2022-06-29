@@ -1,0 +1,72 @@
+{% extends 'board/base.html' %}
+{% block nav %}
+<form action="{% url 'board:posting_page' page_title %}">
+<button type="submit" onmouseover="">+ Add post</button>
+</form>
+{% endblock nav %}
+{% block content %}
+{% if post %}
+    <ul class="posts_list reply_section">
+        <li class="post">
+            <div class="post_head">
+                <h4>{{ post.date_posted }}</h4>
+                <div class="post_topbar">
+                    <h2>{{ post.title }}</h2>
+                </div>
+            </div>
+            <a href="{{ post.url }}" class="post_title_url"><span class="material-symbols-outlined">
+                link
+                </span> {{ post.url_title }}</a>
+            <p>{{ post.post_text }}</p>
+            <div class="post_tags">
+                <ul>
+                    <li>Tags:</li>
+                    {% for tag in post.tags.all %}
+                    <li><a href="{% url 'board:tag_search' page_title tag.name %}">{{ tag.name }}</a></li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <dev class="rules">
+                <h3>{{ page_title }} Board rules:</h3>
+                {{board_rules|safe}}
+            </dev>
+            <ul style="padding-left: 0;">
+                {% for relpy in replies %}
+                    {% if relpy == selected_reply %}
+                        <li class="post reply selceted">
+                    {% else %}
+                        <li class="post reply">
+                    {% endif %}
+                            <div class="post_head">
+                                <h4>{{ relpy.date_posted }}</h4>
+                            </div>
+                            <p>{{ relpy.post_text }}</p>
+                        </li>
+                {% endfor %}
+                </ul>
+        </li>
+
+    </ul>
+{% else %}
+<p>post was not found</p>
+{% endif %}
+<div class="reply_box">
+    <form action="{% url 'board:long_reply' page_title post.id %}">
+        {% csrf_token %}
+        <button type="submit" onmouseover="" class="expand">
+        <span class="material-symbols-outlined" style="padding: 0;">open_in_full</span>
+        </button>
+    </form>
+    <div class="reply_message" style="width: 100%;">
+        <form style="width: -webkit-fill-available;" class="reply_input" id="reply_form" method="post">
+            {% csrf_token %}
+            {{ form }}
+            </form>
+    </div>
+
+    <button type="submit" onmouseover="" form="reply_form"><span class="material-symbols-outlined" style="padding: 0;">send</span></button>
+
+
+
+</div>
+{% endblock content %}

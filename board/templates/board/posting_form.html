@@ -1,0 +1,19 @@
+{% extends 'board/base.html' %}
+{% block content %}
+{% if result %}
+<p>{{ result }}</p>
+{% else %}
+<dev class="posting_section">
+<dev class="rules">
+    <h3>{{ page_title }} Board rules:</h3>
+    {{board_rules|safe}}
+</dev>
+<form id="posting_form" class="posting_form" method="post">
+    {% csrf_token %}
+    {{ form }}
+    <p></p>
+    <button type="submit" form="posting_form">Submit</button>
+</form>
+</dev>
+{% endif %}
+{% endblock content %}

@@ -1,0 +1,31 @@
+{% extends 'board/base.html' %}
+{% load static %}
+{% block styles %}
+<link rel="stylesheet" type="text/css" href="{% static 'board/index_style.css' %}">
+<style>
+    .content{
+        padding:0px !important;
+    }
+</style>
+{% endblock %}
+{% block page_describtion %}
+<div class="board_desc">
+    <h1>{{ page_welcome_note }}</h1>
+    <div class="desc_note">
+        <p>
+            {{ header_describtion |safe }}
+        </p>
+    </div>
+    {% if tags %}
+    <div class="tags">
+        <ul>
+            {% for tag in tags %}
+            <li><a href="{% url 'board:board' tag.name %}">{{tag}}({{tag.post_count}})</a></li>
+            {% endfor %}
+        </ul>
+    </div>
+    {% endif %}
+</div>
+{% endblock page_describtion %}
+{% block content %}
+{% endblock content %}

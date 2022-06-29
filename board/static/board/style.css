@@ -1,0 +1,374 @@
+.material-symbols-outlined {
+    font-variation-settings:
+        'FILL' 1,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 48
+}
+
+main {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    margin: 0px;
+}
+
+.title a,
+a:hover,
+a:focus,
+a:active {
+    text-decoration: none;
+    color: inherit !important;
+}
+
+a,
+a:hover,
+a:focus,
+a:active {
+    color: darkslategrey;
+}
+
+.title .logo {
+    border-right: solid;
+    border-width: 3px;
+    border-color: black;
+}
+
+button {
+    display: flex;
+    align-items: center;
+    background-color: rgb(65 122 122 / 17%);
+    color: darkslategrey;
+    padding: 8px 12px 8px 12px;
+    border: none;
+    border-radius: 9px;
+    font-weight: bold;
+    cursor: pointer;
+
+}
+
+button:hover {
+    background-color: darkslategrey !important;
+    color: whitesmoke;
+}
+
+.title {
+    padding: 6px;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    display: flex;
+    font-size: small;
+    align-items: center;
+    justify-content: space-around;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: white;
+    box-shadow: 0px 0px 20px 10px rgb(0 0 0 / 8%);
+}
+
+
+.post {
+    display: flex;
+    flex-direction: column;
+    border-color: darkslategray;
+    padding: 10px 10px 10px 25px;
+    border-left-style: solid;
+    margin: 15px 0px 15px 0px;
+    border-width: 3px;
+}
+
+.posts_list {
+    padding: 10px 10% 10px 10%;
+
+}
+
+.post_head {
+    display: flex;
+    flex-direction: column;
+    flex-grow: initial;
+    overflow-wrap: break-word;
+}
+
+.post_head h4 {
+    margin: 0px;
+    font-size: smaller;
+    color: darkgray;
+}
+
+.post_topbar {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-content: space-around;
+    justify-content: space-between;
+}
+
+.post_title_url {
+    display: flex;
+    border-radius: 9px;
+    margin: 10px 0px 0px 0px;
+    border: 2px;
+    border-style: solid;
+    border-color: #a5a2a230;
+    color: gray !important;
+    padding: 5px 10px 5px 10px;
+    align-items: center;
+    text-decoration: none !important;
+    overflow: scroll;
+    scrollbar-width: none;
+    /* Firefox */
+    -ms-overflow-style: none;
+    /* Internet Explorer 10+ */
+}
+
+.post_title_url::-webkit-scrollbar {
+    /* WebKit */
+    width: 0;
+    height: 0;
+}
+
+.reply {
+    margin: 20px 0px -5px 0px;
+    background-color: #5389891f;
+    border: none;
+    border-radius: 0px 15px 15px 15px;
+}
+
+.reply_box {
+    display: flex;
+    font-size: small;
+    align-items: center;
+    justify-content: space-around;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #ffffffb6;
+    box-shadow: 0px 0px 20px 1px rgb(0 0 0 / 8%);
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
+}
+
+.reply_box .expand {
+    background-color: rgb(65 122 122 / 0%);
+}
+
+.reply_box reply_message {
+    width: 100%;
+}
+
+.reply_box .reply_input input {
+    width: 95%;
+    width: -webkit-fill-available;
+    width: -moz-available;
+    margin: 10px 0px 10px 0px;
+    padding: 15px 3px 15px 17px;
+    border: none;
+    background-color: #eaeaeabd;
+    border-radius: 9px;
+}
+
+.reply_box button {
+    background-color: rgb(65 122 122 / 17%);
+    padding: 11px;
+    margin: 10px;
+}
+
+.reply_box .expand:hover {
+    color: darkslategray;
+    background-color: rgb(65 122 122 / 0%) !important;
+}
+
+ul.posts_list.reply_section {
+    margin-top: 52px;
+    padding-top: 30px;
+}
+
+.material-symbols-outlined {
+    padding-right: 3px;
+}
+
+.post_head p {
+    margin: 5px 0px 5px 0px;
+}
+
+.post_head button {
+    margin-top: -17px;
+}
+
+.post_tags ul {
+    list-style-type: none;
+    list-style-position: inside;
+    padding-left: 10px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.post_tags li {
+    padding-right: 10px;
+}
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.sidebar ul {
+    padding: 10px;
+    list-style-position: inside;
+}
+
+#post_form ul li {
+    list-style-type: none;
+}
+
+.posting_form input {
+    width: 100%;
+}
+
+.posting_form textarea {
+    width: 100%;
+    height: 100px;
+    resize: none;
+}
+
+.posting_form {
+    line-height: 30px;
+}
+
+.rules {
+    padding: 75px 15px 20px 15px;
+}
+
+.title {
+    display: flex;
+    align-items: baseline;
+    padding: 0px 5px 0px 5px;
+}
+
+.board_desc {
+    display: block;
+    text-align: center;
+    background-color: darkslategray;
+    color: white;
+    margin-top: 80px;
+    overflow: auto;
+    margin-top: 63px;
+}
+
+@media screen and (min-width: 600px) {
+    .board_desc {
+        padding: 50px 25% 50px 25%;
+    }
+
+    .posting_form {
+        width: 50%;
+    }
+
+    .post_topbar h2 {
+        width: 80%;
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+    .board_desc {
+        padding: 50px 10% 50px 10%;
+    }
+
+    .posting_form {
+        width: 90%;
+    }
+
+    .post_actions {
+        width: 100%;
+    }
+
+    .post_actions button {
+        width: 100%;
+        margin-top: 10px;
+        justify-content: center;
+    }
+
+    .post_topbar h2 {
+        width: 100%;
+    }
+}
+
+.board_desc a {
+    color: azure;
+}
+
+.tags ul {
+    display: flex;
+    justify-content: center;
+    padding: 20px 0px 20px 0px;
+    margin: 0;
+    flex-wrap: wrap;
+}
+
+.tags ul li {
+    list-style-type: none;
+    padding: 0px 10px 0px 10px;
+}
+
+.desc_note {
+    display: flex;
+}
+
+.desc_note p {
+    text-align: justify;
+}
+
+.post_actions {
+    margin: 0px;
+}
+
+.post_head h2 {
+    margin: 0px;
+}
+
+.posting_section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.content {
+    padding-bottom: 100px;
+}
+
+.post .rules {
+    border-radius: 9px;
+    padding-top: 0px;
+    margin-top: 20px;
+    box-shadow: 0px 2px 14px 0px #b1b6b6;
+    background-color: darkslategrey;
+    color: white;
+}
+
+.post.reply.selceted {
+    background-color: #4e8d8de6;
+    color: white;
+}
+
+.post.reply.selceted .post_head h4 {
+    color: white;
+}
+
+.board_page_message {
+    text-align: center;
+    font-weight: bold;
+    margin: 20px 0px -22px 0px;
+    color: darkslategray;
+}

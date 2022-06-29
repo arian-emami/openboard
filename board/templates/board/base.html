@@ -1,0 +1,42 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" type="text/css" href="{% static 'board/style.css' %}">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+{% block styles %}
+{% endblock %}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <main>
+        <header>
+            <div class="title">
+                <div>
+                    <h1 class="title logo"><a href="{% url 'board:index' %}" title="Home">OpenBoard</a></h1>
+                </div>
+                <div >
+                    {% if not is_index %}
+                    <h1 class="title page_name"><a href={% url 'board:board' page_title %}>{{ page_title }}</a></h1>
+                    {% else %}
+                    <h1 class="title page_name">{{ page_title }}</h1>
+                    {% endif %}
+
+                </div>
+            </div>
+            {% block nav %}{% endblock nav %}
+        </header>
+        {% block page_describtion %}{% endblock page_describtion %}
+        <div class="content">
+            {% block content %}{% endblock content %}
+        </div>
+
+    </main>
+</body>
+
+</html>
