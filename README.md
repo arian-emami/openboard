@@ -1,4 +1,4 @@
-![](Picture1.png)
+![](header_pic.png)
 # OpenBoard
 
 An open place to share
