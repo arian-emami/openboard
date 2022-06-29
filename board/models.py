@@ -79,10 +79,13 @@ class Post(models.Model):
     url_title = models.TextField(max_length=200, blank=False)
     board = models.ForeignKey(Board, on_delete=models.CASCADE, blank=False)
     post_text = models.TextField(max_length=600, blank=False)
-    tags = models.ManyToManyField(Tag)
+    tags = models.ManyToManyField(Tag, blank=True)
 
     class Meta:
         ordering = ["-date_posted"]
+
+    def relpy_count(self):
+        return self.reply_set.count()
 
     def __str__(self) -> str:
         return self.title

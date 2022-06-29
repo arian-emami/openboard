@@ -42,7 +42,13 @@
                         {% csrf_token %}
                         <button onmouseover=""><span class="material-symbols-outlined">
                             inbox
-                            </span><p>3 Replies</p></button>
+                            </span>
+                                {% if post.relpy_count == 0 %}
+                                    <p>Add Reply</p>
+                                {% else %}
+                                <p>{{ post.relpy_count }} Replies</p>
+                                {% endif %}
+                            </button>
                     </form>
                 </div>
             </div>
