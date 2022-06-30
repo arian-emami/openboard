@@ -7,7 +7,7 @@ An open place to share
 
 License: MIT
 
-OpenBoard is a Django pluggable app for adding a forum-like experience to any website. It doesn't use any third-party plugins nor does it use any frontend libraries. Everything is done through Django, Django templates, and CSS (although the project structure allows for extendibility).<br>
+OpenBoard is a Django plugable app for adding a forum-like experience to any website. It doesn't use any third-party plugins nor does it use any frontend libraries. Everything is done through Django, Django templates, and CSS (although the project structure allows for extendibility).<br>
 For deploying OpenBoard as a standalone app cookiecutter-Django is used to make the deployment process easier.<br>
 
 Demo: [OpenBoard in action](https://openboarddemo.herokuapp.com/) (database will be wiped periodically)
