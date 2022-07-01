@@ -3,26 +3,35 @@
 
 An open place to share
 
-[![Built with Cookiecutter Django](https://img.shields.io/badge/built%20with-Cookiecutter%20Django-ff69b4.svg?logo=cookiecutter)](https://github.com/cookiecutter/cookiecutter-django/)
 [![Black code style](https://img.shields.io/badge/code%20style-black-000000.svg)](https://github.com/ambv/black)
 
 License: MIT
 
-## Settings
+OpenBoard is a Django plugable app for adding a forum-like experience to any website. It doesn't use any third-party plugins nor does it use any frontend libraries. Everything is done through Django, Django templates, and CSS (although the project structure allows for extendibility).<br>
+For deploying OpenBoard as a standalone app cookiecutter-Django is used to make the deployment process easier.<br>
 
-Moved to [settings](http://cookiecutter-django.readthedocs.io/en/latest/settings.html).
+Demo: [OpenBoard in action](https://openboarddemo.herokuapp.com/) (database will be wiped periodically)
 
-## Basic Commands
 
-### Setting Up Your Users
+## Implemented:
+- Index page and its customizations settings
+- Board page and its settings
+- Tagging system that allows users to create and query tags and add them to their posts
+- Manage what tags can be shown in the header
+- Quick-reply for writing short replies and a dedicated reply page for longer ones
+- A dedicated page for posting with complete form validation
+- Form URL fields automatically fetch URL title to show in the post 
+- Complete frontend made with Django templates and pure CSS 
 
--   To create a **normal user account**, just go to Sign Up and fill out the form. Once you submit it, you'll see a "Verify Your E-mail Address" page. Go to your console to see a simulated email verification message. Copy the link into your browser. Now the user's email should be verified and ready to go.
+## ToDo
+- Unit tests for Board app
+- Authentication
+- Captcha
+- Dedicated doc page (the code is commented pretty well)
 
--   To create a **superuser account**, use this command:
+This is a work in progress and not complete, please don't use it in production
 
-        $ python manage.py createsuperuser
-
-For convenience, you can keep your normal user logged in on Chrome and your superuser logged in on Firefox (or similar), so that you can see how the site behaves for both kinds of users.
+I have used Django before here and there but never have I found the time to make a full-on website from start to the end. This project is the first one and I thought way not make it public. Don't hesitate to ask me any question or give me advice whether here or on my email : emamiarian8@gmail.com
 
 ### Type checks
 
@@ -41,10 +50,6 @@ To run the tests, check your test coverage, and generate an HTML coverage report
 #### Running tests with pytest
 
     $ pytest
-
-### Live reloading and Sass CSS compilation
-
-Moved to [Live reloading and SASS compilation](https://cookiecutter-django.readthedocs.io/en/latest/developing-locally.html#sass-compilation-live-reloading).
 
 ## Deployment
 
