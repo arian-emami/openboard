@@ -31,7 +31,7 @@ Demo: [OpenBoard in action](https://openboarddemo.herokuapp.com/) (database will
 
 This is a work in progress and not complete, please don't use it in production
 
-I have used Django before here and there but never have I found the time to make a full-on website from start to the end. This project is the first one and I thought way not make it public. Don't hesitate to ask me any question or give me advice whether here or on my email : emamiarian8@gmail.com
+I have used Django before here and there but never have I found the time to make a full-on website from start to the end. This project is the first one and I thought why not make it public. Don't hesitate to ask me any question or give me advice whether here or on my email : emamiarian8@gmail.com
 
 ### Type checks
 
