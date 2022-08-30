@@ -20,8 +20,8 @@ Demo: [OpenBoard in action](https://openboarddemo.herokuapp.com/) (database will
 - Manage what tags can be shown in the header
 - Quick-reply for writing short replies and a dedicated reply page for longer ones
 - A dedicated page for posting with complete form validation
-- Form URL fields automatically fetch URL title to show in the post 
-- Complete frontend made with Django templates and pure CSS 
+- Form URL fields automatically fetch URL title to show in the post
+- Complete frontend made with Django templates and pure CSS
 
 ## ToDo
 - Unit tests for Board app

@@ -11,11 +11,7 @@ from django.urls import reverse
 from openboard.users.forms import UserAdminChangeForm
 from openboard.users.models import User
 from openboard.users.tests.factories import UserFactory
-from openboard.users.views import (
-    UserRedirectView,
-    UserUpdateView,
-    user_detail_view,
-)
+from openboard.users.views import UserRedirectView, UserUpdateView, user_detail_view
 
 pytestmark = pytest.mark.django_db
 
